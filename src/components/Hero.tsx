@@ -1,11 +1,7 @@
-import { Mail, Download, MapPin, ChevronDown } from "lucide-react";
-import { Button } from "./ui/button";
+import { MapPin, ChevronDown } from "lucide-react";
+
 
 export const Hero = () => {
-  const scrollToContact = () => {
-    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   const scrollToAbout = () => {
     document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -45,28 +41,6 @@ export const Hero = () => {
             Experienced in AI, Machine Learning, and Full Stack Development.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up" style={{ animationDelay: "0.4s" }}>
-            <Button
-              onClick={scrollToContact}
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 px-8"
-            >
-              <Mail size={18} />
-              Get in Touch
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-border/50 text-foreground hover:bg-secondary gap-2 px-8"
-              asChild
-            >
-              <a href="/resume/Suchitra-Kumar-Sahoo-Resume.pdf" download>
-                <Download size={18} />
-                Download Resume
-              </a>
-            </Button>
-          </div>
 
           {/* Location */}
           <div className="flex items-center gap-2 text-muted-foreground animate-slide-up" style={{ animationDelay: "0.5s" }}>
