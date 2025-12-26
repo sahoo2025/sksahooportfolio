@@ -1,5 +1,6 @@
 import { Mail, Download, MapPin, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
+import profilePicture from "@/assets/profile-picture.jpeg";
 
 export const Hero = () => {
   const scrollToContact = () => {
@@ -19,6 +20,22 @@ export const Hero = () => {
 
       <div className="container mx-auto px-6 pt-20 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+          {/* Profile Picture with animated border */}
+          <div className="relative mb-8 animate-slide-up">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-accent to-primary animate-spin-slow blur-md opacity-75" style={{ padding: '4px' }} />
+            <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-background shadow-glow">
+              <img 
+                src={profilePicture} 
+                alt="Suchitra Kumar Sahoo" 
+                className="w-full h-full object-cover object-top animate-fade-in"
+              />
+            </div>
+            {/* Floating particles effect */}
+            <div className="absolute -top-2 -right-2 w-4 h-4 rounded-full bg-primary/80 animate-float" />
+            <div className="absolute -bottom-1 -left-3 w-3 h-3 rounded-full bg-accent/60 animate-float" style={{ animationDelay: '1s' }} />
+            <div className="absolute top-1/2 -right-4 w-2 h-2 rounded-full bg-primary/50 animate-float" style={{ animationDelay: '0.5s' }} />
+          </div>
+
           {/* Open to work badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8 animate-slide-up">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse-slow" />
